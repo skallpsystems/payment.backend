@@ -51,7 +51,7 @@ app.use('/api/masters', masterRoutes);
 // Health check endpoint
 app.get('/api/health', (req, res) => {
   res.json({
-    status: 'healthy',
+    status: 'healthy and added ci/cp pipeline',
     app: 'SKALLP Centralized Payment Module',
     architecture: 'MVC with ES6 ESM Modules',
     version: '1.0.0',

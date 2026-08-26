@@ -14,7 +14,7 @@
     "express",
     "postgres",
     "skallp"
-    ],
+  ],
   "author": "SKAIspat",
   "license": "ISC",
   "dependencies": {

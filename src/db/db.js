@@ -20,15 +20,16 @@ export async function initPool() {
     const dbPort = process.env.PG_PORT || 5432;
     const dbUser = process.env.PG_USER || 'postgres';
     const dbPassword = process.env.PG_PASSWORD || 'admin123';
-    const dbUrl = process.env.DATABASE_URL || `postgresql://${dbUser}:${dbPassword}@${dbHost}:${dbPort}/${dbName}`;
 
     pool = new Pool({
-      connectionString: dbUrl,
       host: dbHost,
       port: dbPort,
       user: dbUser,
       password: dbPassword,
       database: dbName,
+      ssl: {
+        rejectUnauthorized: false
+      },
       connectionTimeoutMillis: 5000
     });
 
